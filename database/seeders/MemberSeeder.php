@@ -1,0 +1,25 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
+class MemberSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        User::create([
+            'company_id' => 1,
+            'name' => 'Member',
+            'email' => 'member@gmail.com',
+            'role' => 'member',
+            'password' => Hash::make('12345678'),
+        ]);
+    }
+}
